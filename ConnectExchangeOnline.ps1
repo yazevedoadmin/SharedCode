@@ -10,4 +10,5 @@ Import-Module ExchangeOnlineManagement
 
 Connect-ExchangeOnline
 
+#Connect para operações diferentes
 Connect-IPPSSession
