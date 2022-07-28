@@ -9,6 +9,9 @@ Get-Mailbox -identity UserMailBox | FL *HoldApplied*
 #Colocar a politica que será utilizada (Atenção neste comando).
 Set-Mailbox UserMailBox -RetentionPolicy "Default MRM Policy"
 
+#Códigos de alteração para remover as politicas
 Set-Mailbox UserMailBox -RetentionHoldEnabled $false
 Set-Mailbox -Identity UserMailBox -RemoveDelayHoldApplied
+
+#Comando que força a movimentação
 Start-ManagedFolderAssistant -Identity UserMailBox
